@@ -6,6 +6,9 @@ __pycache__/
 #Mac DS Store
 .DS_Store
 
+#PyCharm
+.idea
+
 # C extensions
 *.so
 
