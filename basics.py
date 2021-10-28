@@ -1,3 +1,7 @@
+import os
+
+os.system('clear')
+
 list1 = ['a', 'b', 'c']
 list2 = ['d', 'e', 'f']
 list3 = list1 + list2
@@ -17,4 +21,3 @@ else:
 dict1 = {'key1':'value1',
          'key2':'value2'}
 print(dict1)
-print(dict1['key2'])
