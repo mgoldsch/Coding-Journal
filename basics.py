@@ -13,3 +13,8 @@ if input1 % 2 == 0:
     print("the number you entered is even")
 else:
     print("the number you entered is odd")
+
+dict1 = {'key1':'value1',
+         'key2':'value2'}
+print(dict1)
+print(dict1['key2'])
