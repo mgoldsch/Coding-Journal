@@ -29,4 +29,3 @@ class Family:
 
     def _remove_family_name(self, member):
         member.family_name = ""
-        
