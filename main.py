@@ -12,7 +12,6 @@ family_members = [kid1, parent1, parent2, dog]
 family_name = "LastName"
 
 test_family = Family(family_name, family_members)
-print(test_family.get_members([Dog]))
-print(test_family.get_members([Dog])[0].family_name)
-print(test_family.get_members([Dog])[0].name)
+print(test_family.get_members_names([Dog]))
+
 

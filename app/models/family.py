@@ -13,16 +13,17 @@ class Family:
         self.family_members.remove(member)
         self._remove_family_name(member)
 
-    def get_members(self, filters = None):
+    def get_members_names(self, filters = None):
+        members_names = []
         if filters is None:
-            return self.family_members
+            for member in self.family_members:
+                members_names.append(member.name)
         else:
-            members = []
             for member in self.family_members:
                 for filter in filters:
                     if isinstance(member, filter):
-                        members.append(member)
-            return members
+                        members_names.append(member.name)
+        return members_names
 
     def _set_family_name(self, member):
         member.family_name = self.family_name
