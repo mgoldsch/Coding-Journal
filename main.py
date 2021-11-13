@@ -13,3 +13,4 @@ family_name = "LastName"
 
 test_family = Family(family_name, family_members)
 print(test_family.get_members([Dog]))
+print(test_family.get_members([Dog])[0].family_name)
