@@ -11,6 +11,7 @@ class Family:
 
     def remove_member(self, member):
         self.family_members.remove(member)
+        self._remove_family_name(member)
 
     def get_members(self, filters = None):
         if filters is None:
@@ -25,3 +26,7 @@ class Family:
 
     def _set_family_name(self, member):
         member.family_name = self.family_name
+
+    def _remove_family_name(self, member):
+        member.family_name = ""
+        
