@@ -4,4 +4,4 @@ from app.models.person import Person
 
 class Kid(Person, FamilyMember):
     def __init__(self, name):
-        super(Kid, self).__init__(name=name, greeting="Hey!")
+        super(Kid, self).__init__(first_name=name, greeting="Hey!")
