@@ -23,3 +23,7 @@ student = Student(first_name, last_name, class_year)
 
 ses.add(student)
 ses.commit()
+
+students = ses.query(Student).all()
+for s in students:
+    print(f"student: {s.first_name}, {s.last_name}, {s.class_year}")
