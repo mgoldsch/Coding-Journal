@@ -1,8 +1,8 @@
-from orm.models import base
+from models import base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
-from orm.models.student import Student
+from models.student import Student
 
 Base = base.get_base()
 
