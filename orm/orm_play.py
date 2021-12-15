@@ -13,3 +13,13 @@ session.configure(bind=engine)
 Base.metadata.create_all(engine)
 
 ses = session()
+
+print("You will enter a students info....")
+first_name = input("Please enter the student's first name: ")
+last_name = input("Please enter the student's last name: ")
+class_year = int(input("Please enter the student's class year: "))
+
+student = Student(first_name, last_name, class_year)
+
+ses.add(student)
+ses.commit()
