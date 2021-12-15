@@ -1,5 +1,5 @@
 import pytest
-from orm.models.student import Student
+from models.student import Student
 
 class TestStudent:
     def test_display_name(self):
