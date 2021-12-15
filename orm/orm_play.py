@@ -34,4 +34,4 @@ for s in students:
 retrieve_class_year = int(input("Please enter the class year of students you would like to query: "))
 students = ses.query(Student).filter(Student.class_year == retrieve_class_year)
 for s in students:
-    print(f"student: {s.first_name}, {s.last_name}, {s.class_year}, {s.college.name}")
+    print(f"student: {s.display_name()}, {s.first_name}, {s.last_name}, {s.class_year}, {s.college.name}")
