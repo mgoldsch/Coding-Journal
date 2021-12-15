@@ -19,5 +19,5 @@ class Student(Base):
         self.class_year = class_year
 
     def display_name(self):
-        display_name = self.first_name + self.last_name[0]
+        display_name = self.first_name + " " + self.last_name[0].capitalize() + "."
         return display_name
