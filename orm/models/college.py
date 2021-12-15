@@ -1,8 +1,10 @@
-from sqlalchemy import Column, DateTime, String, Integer, ForeignKey
-from sqlalchemy.orm import relationship, backref
-from models import base
+from sqlalchemy import Column, String, Integer
+from models.base import *
 
-class College(base.get_base()):
+class College(Base):
     __tablename__ = 'colleges'
     id = Column(Integer, primary_key=True)
     name = Column(String)
+
+    def __init__(self, students):
+        self.students = students

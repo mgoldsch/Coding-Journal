@@ -1,18 +1,17 @@
-from sqlalchemy import Column, DateTime, String, Integer, ForeignKey
+from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.orm import relationship, backref
-from models import base
+from models.base import *
 
 from models.college import College
 
-class Student(base.get_base()):
+class Student(Base):
     __tablename__ = 'students'
     id = Column(Integer, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)
     class_year = Column(Integer)
-
     college_id = Column(Integer, ForeignKey('colleges.id'))
-    college = relationship(College, backref="students")
+    college = relationship(College, backref=backref('students', uselist=True, cascade='delete,all'))
 
     def __init__(self, first_name, last_name, class_year):
         self.first_name = first_name
